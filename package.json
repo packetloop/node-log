@@ -42,14 +42,15 @@
   "engines": {
     "node": "6"
   },
-  "dependencies": {},
+  "dependencies": {
+    "morgan": "^1",
+    "on-finished": "^2"
+  },
   "devDependencies": {
     "babel-cli": "^6",
     "babel-preset-es2015-node6": "^0.2",
     "eslint": "^2",
-    "eslint-config-packetloop": "github:packetloop/eslint-config-packetloop",
-    "morgan": "^1",
-    "on-finished": "^2"
+    "eslint-config-packetloop": "github:packetloop/eslint-config-packetloop"
   },
   "peerDependencies": {}
 }
