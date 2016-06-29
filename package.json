@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "name": "packetloop-node-log",
+  "version": "0.0.0",
+  "author": {
+    "name": "Nik Butenko",
+    "email": "nik@butenko.me",
+    "url": "https://twitter.com/nkbtnk"
+  },
+  "bugs": {
+    "url": "https://github.com/packetloop/node-log/issues"
+  },
+  "contributors": [
+    {
+      "name": "Nik Butenko",
+      "email": "nik@butenko.me",
+      "url": "https://twitter.com/nkbtnk"
+    }
+  ],
+  "description": "Packetloop's library code for logging from node",
+  "homepage": "https://github.com/packetloop/node-log",
+  "keywords": [
+    "packetloop",
+    "javascript",
+    "shrinkwrap",
+    "clean shrinkwrap"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/packetloop/node-log.git"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "lint": "eslint .",
+    "pretest": "npm run build -s",
+    "test": "echo No tests",
+    "postversion": "git push --follow-tags",
+    "prepublish": "npm run build -s"
+  },
+  "engines": {
+    "node": "6"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6",
+    "babel-preset-es2015-node6": "^0.2",
+    "eslint": "^2",
+    "eslint-config-packetloop": "github:packetloop/eslint-config-packetloop",
+    "morgan": "^1",
+    "on-finished": "^2"
+  },
+  "peerDependencies": {}
+}
