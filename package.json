@@ -1,36 +1,12 @@
 {
-  "private": true,
-  "name": "packetloop-node-log",
-  "version": "1.0.1",
-  "author": {
-    "name": "Nik Butenko",
-    "email": "nik@butenko.me",
-    "url": "https://twitter.com/nkbtnk"
+  "name": "@packetloop/node-log",
+  "version": "1.0.0",
+  "publishConfig": {
+    "registry": "https://api.bintray.com/npm/arbornetworks/packetloop"
   },
-  "bugs": {
-    "url": "https://github.com/packetloop/node-log/issues"
-  },
-  "contributors": [
-    {
-      "name": "Nik Butenko",
-      "email": "nik@butenko.me",
-      "url": "https://twitter.com/nkbtnk"
-    }
-  ],
   "description": "Packetloop's library code for logging from node",
-  "homepage": "https://github.com/packetloop/node-log",
-  "keywords": [
-    "packetloop",
-    "javascript",
-    "shrinkwrap",
-    "clean shrinkwrap"
-  ],
-  "license": "MIT",
   "main": "lib/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/packetloop/node-log.git"
-  },
+  "bin": {},
   "scripts": {
     "build": "babel src --out-dir lib",
     "lint": "eslint .",
@@ -39,6 +15,33 @@
     "postversion": "git push --follow-tags",
     "prepublish": "npm run build -s"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/packetloop/node-log.git"
+  },
+  "keywords": [
+    "packetloop",
+    "javascript",
+    "shrinkwrap",
+    "clean shrinkwrap"
+  ],
+  "author": {
+    "name": "Nik Butenko",
+    "email": "nik@butenko.me",
+    "url": "https://twitter.com/@nkbtnk"
+  },
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Nik Butenko",
+      "email": "nik@butenko.me",
+      "url": "https://twitter.com/nkbtnk"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/packetloop/node-log/issues"
+  },
+  "homepage": "https://github.com/packetloop/node-log",
   "engines": {
     "node": "6"
   },
@@ -47,10 +50,10 @@
     "on-finished": "^2"
   },
   "devDependencies": {
+    "@packetloop/eslint-config-packetloop": "^1",
     "babel-cli": "^6",
     "babel-preset-es2015-node6": "^0.2",
-    "eslint": "^2",
-    "eslint-config-packetloop": "github:packetloop/eslint-config-packetloop"
+    "eslint": "^2"
   },
   "peerDependencies": {}
 }
