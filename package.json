@@ -1,6 +1,6 @@
 {
   "name": "@packetloop/node-log",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publishConfig": {
     "registry": "https://api.bintray.com/npm/arbornetworks/packetloop"
   },
