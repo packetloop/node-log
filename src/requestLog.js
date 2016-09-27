@@ -14,7 +14,7 @@ export const getIp = req =>
   safeString((req.headers['X-Forwarded-For'] || morgan['remote-addr'](req) || '').split(',')[0]);
 
 
-export const requestLog = ({NODE_ENV, CLUB_ID, CLUB_NAME, SERVICE_NAME}) =>
+export const requestLog = ({ENVIRONMENT, CLUB_ID, CLUB_NAME, SERVICE_NAME}) =>
   morgan((tokens, req, res) => {
     const logObject = {
       url: safeUrl(tokens.url(req, res)),
@@ -31,7 +31,7 @@ export const requestLog = ({NODE_ENV, CLUB_ID, CLUB_NAME, SERVICE_NAME}) =>
 
     const tags = [
       `service_name:${SERVICE_NAME}`,
-      `env:${NODE_ENV}`,
+      `env:${ENVIRONMENT}`,
       `club_id:${CLUB_ID}`,
       `club_name:${CLUB_NAME}`,
       `http_method:${logObject.method.toLowerCase()}`,
